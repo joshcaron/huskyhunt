@@ -2,3 +2,49 @@
 tfoot .content {
 	text-align: center;
 }
+
+.headerSortUp {
+
+}
+
+.headerSortDown {
+
+}
+
+thead tr th {
+	.sort {
+		&.ascending.icon {
+			display: none;
+		}
+
+		&.descending.icon {
+			display: none;
+		}
+	}
+
+	&.header {
+		&.headerSortUp {
+			.sort {
+				display: none;
+				&.ascending.icon {
+					display: none;
+				}
+				&.descending.icon {
+					display: inline-block;
+				}
+			}
+		}
+
+		&.headerSortDown {
+			.sort {
+				display: none;
+				&.ascending.icon {
+					display: inline-block;
+				}
+				&.descending.icon {
+					display: none;
+				}
+			}
+		}
+	}
+}

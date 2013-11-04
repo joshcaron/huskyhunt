@@ -1,3 +1,20 @@
 .ui.header,
 tfoot .content {
   text-align: center; }
+
+thead tr th .sort.ascending.icon {
+  display: none; }
+thead tr th .sort.descending.icon {
+  display: none; }
+thead tr th.header.headerSortUp .sort {
+  display: none; }
+  thead tr th.header.headerSortUp .sort.ascending.icon {
+    display: none; }
+  thead tr th.header.headerSortUp .sort.descending.icon {
+    display: inline-block; }
+thead tr th.header.headerSortDown .sort {
+  display: none; }
+  thead tr th.header.headerSortDown .sort.ascending.icon {
+    display: inline-block; }
+  thead tr th.header.headerSortDown .sort.descending.icon {
+    display: none; }

@@ -1,41 +1,17 @@
 <?php 
 require 'includes/Head.php';
 ?>
-
-<table class="ui table segment" id="clues">
+<input type="text" id="search" placeholder="Type to search" class="ui input">
+<table class="ui table segment tablesorter" id="clues">
 	<thead>
 		<tr>
-			<th>Clue</th>
-			<th>Points</th>
-			<th>Address</th>
-			<th>Photo</th>
+			<th>Clue<i class="sort ascending icon"></i><i class="sort descending icon"></i><i class="sort icon"></i></th>
+			<th>Points<i class="sort ascending icon"></i><i class="sort descending icon"></i><i class="sort icon"></i></th>
+			<th>Address<i class="sort ascending icon"></i><i class="sort descending icon"></i><i class="sort icon"></i></th>
+			<th>Photo<i class="sort ascending icon"></i><i class="sort descending icon"></i><i class="sort icon"></i></th>
 		</tr>
 	</thead>
 	<tbody>
-		<tr>
-			<td>Test</td>
-			<td>Test</td>
-			<td>Test</td>
-			<td>Test</td>
-		</tr>
-		<tr>
-			<td>Test</td>
-			<td>Test</td>
-			<td>Test</td>
-			<td>Test</td>
-		</tr>
-		<tr>
-			<td>Test</td>
-			<td>Test</td>
-			<td>Test</td>
-			<td>Test</td>
-		</tr>
-		<tr>
-			<td>Test</td>
-			<td>Test</td>
-			<td>Test</td>
-			<td>Test</td>
-		</tr>
 	</tbody>
 	<tfoot>
 		<tr>
@@ -50,6 +26,6 @@ require 'includes/Head.php';
 	<input type="file" name="userfile" accept="image/*" capture="camera">
 	<input type="submit" value="Submit">
 </form>
-
+<script type="text/javascript" src="/assets/js/index.js"></script>
 <?php
 require 'includes/Foot.php';
