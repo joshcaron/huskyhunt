@@ -1,3 +1,6 @@
+html, body, .ui.page.grid, .column {
+  height: 100%; }
+
 .ui.header,
 tfoot .content {
   text-align: center; }
@@ -18,3 +21,8 @@ thead tr th.header.headerSortDown .sort {
     display: inline-block; }
   thead tr th.header.headerSortDown .sort.descending.icon {
     display: none; }
+
+.choices .button {
+  max-width: 300px;
+  margin: 0 auto 20px auto;
+  display: block; }
