@@ -1,6 +1,9 @@
 html, body, .ui.page.grid, .column {
   height: 100%; }
 
+.header {
+  font-family: 'Helevtica', sans-serif; }
+
 .ui.header,
 tfoot .content {
   text-align: center; }

@@ -6,6 +6,10 @@ Google.Maps = {
 
 	geocoder: {},
 
+	blueMarker: '/assets/img/marker_blue.png',
+	redMarker: '/assets/img/marker_red.png',
+	greenMarker: '/assets/img/marker_green.png',
+
 	init: function() {
 		this.geocoder = new google.maps.Geocoder();
 		var mapOptions = {
@@ -49,15 +53,27 @@ Google.Maps = {
 	},
 
 	placeMarker: function(clue) {
+		var icon = this.determineClueColor(clue);
 		var marker = new google.maps.Marker({
 			map: this.map,
 			position: clue.latlang,
-			title: clue.description
+			title: clue.description,
+			icon: icon
 		});
-		console.log(marker);
+		// console.log(marker);
 	},
 
-	handleGeocodeResponse: function(results, status) {
-		
+	determineClueColor: function(clue) {
+		var points = clue.pointvalue;
+		var icon = this.redMarker;
+		if (points > 100) {
+			icon = this.greenMarker;
+		}
+
+		if (points > 200) {
+			icon = this.blueMarker;
+		}
+
+		return icon;
 	}
 }
