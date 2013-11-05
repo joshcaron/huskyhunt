@@ -12,12 +12,12 @@ tfoot .content {
 	text-align: center;
 }
 
-.headerSortUp {
-
-}
-
-.headerSortDown {
-
+.header a {
+	color: #D95C5C;
+	text-decoration: none;
+	&:visited {
+		color: #D95C5C;
+	}
 }
 
 thead tr th {

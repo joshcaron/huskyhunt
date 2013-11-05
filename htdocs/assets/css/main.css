@@ -8,6 +8,12 @@ html, body, .ui.page.grid, .column {
 tfoot .content {
   text-align: center; }
 
+.header a {
+  color: #D95C5C;
+  text-decoration: none; }
+  .header a:visited {
+    color: #D95C5C; }
+
 thead tr th .sort.ascending.icon {
   display: none; }
 thead tr th .sort.descending.icon {

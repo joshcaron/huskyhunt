@@ -24,6 +24,6 @@ $spreadsheet = '0Ajgj_dge0NVpdEpIZWk1MWVYZVNSMjh2SjY4VHhJVGc';
 <div class="ui one column page grid">
 	<div class="column">
 		<h1 class="ui huge red header">
-			<div class="content">The Upton Sinclairs</div>
+			<div class="content"><a href="/">The Upton Sinclairs</a></div>
 			<div class="sub header">Husky Hunt 2013</div>
 		</h1>
