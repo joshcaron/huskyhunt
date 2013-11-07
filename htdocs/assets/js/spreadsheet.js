@@ -77,9 +77,7 @@ Google.Spreadsheet = {
 	createTableRow: function(row) {
 		var entry = "<tr>";
 		for (var key in row) {
-			if (key == "id") {
-				continue;
-			}
+
 			var value = row[key];
 			if (key == "address") {
 				var address = value.split("\n");
