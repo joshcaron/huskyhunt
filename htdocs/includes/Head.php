@@ -6,6 +6,7 @@ $spreadsheet = '0Ajgj_dge0NVpdEpIZWk1MWVYZVNSMjh2SjY4VHhJVGc';
 <head>
 	<title>The Upton Sinclairs</title>
 	<link rel="stylesheet" type="text/css" href="/assets/css/semantic.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<script type="text/javascript" src="/assets/js/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript" src="/assets/js/jquery.tablesorter.min.js"></script>
 	<script type="text/javascript" src="/assets/js/spreadsheet.js"></script>
