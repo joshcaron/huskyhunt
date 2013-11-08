@@ -25,11 +25,7 @@ if (in_array($extension, $allowedExts)) {
 		if (file_exists("upload/" . $fileName)) {
 			echo $fileName . " already exists. ";
 		} else {
-			$uploadFolder = $root . "/uploads";
-			if (!file_exists($uploadFolder)) {
-			    mkdir('uploadFolder', 0777, true);
-			}
-			move_uploaded_file($_FILES["userfile"]["tmp_name"], $uploadFolder . "/" . $fileName);
+			move_uploaded_file($_FILES["userfile"]["tmp_name"], $root . "/uploads/" . $fileName);
 			echo "Stored in: " . $root . "/uploads/" . $fileName;
 		}
 	}
