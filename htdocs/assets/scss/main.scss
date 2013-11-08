@@ -63,3 +63,29 @@ thead tr th {
 	margin: 0 auto 20px auto;
 	display: block;
 }
+
+.upload {
+	position: relative;
+}
+
+.upload input[type="file"] {
+	cursor: pointer;
+	display: block;
+	position:absolute;
+	top:0;
+	left: 0;
+
+	/* start of transparency styles */
+	opacity:0;
+	/* end of transparency styles */
+	background: red;
+	z-index:2; /* bring the real upload interactivity up front */
+	width:100%;
+	height: 100%;
+}
+
+#map-canvas .info {
+	dt {
+		font-weight: bold;
+	}
+}

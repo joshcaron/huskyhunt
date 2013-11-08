@@ -9,6 +9,7 @@ require 'includes/Head.php';
 			<th>Clue<i class="sort ascending icon"></i><i class="sort descending icon"></i><i class="sort icon"></i></th>
 			<th>Points<i class="sort ascending icon"></i><i class="sort descending icon"></i><i class="sort icon"></i></th>
 			<th>Address<i class="sort ascending icon"></i><i class="sort descending icon"></i><i class="sort icon"></i></th>
+			<th>Information<i class="sort ascending icon"></i><i class="sort descending icon"></i><i class="sort icon"></i></th>
 			<th>Photo<i class="sort ascending icon"></i><i class="sort descending icon"></i><i class="sort icon"></i></th>
 		</tr>
 	</thead>
@@ -16,7 +17,7 @@ require 'includes/Head.php';
 	</tbody>
 	<tfoot>
 		<tr>
-			<th colspan="5">
+			<th colspan="6">
 				<div class="content">If you see any issues with this, call Josh at 774-232-1250	</div>
 			</th>
 		</tr>

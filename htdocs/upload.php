@@ -31,5 +31,10 @@ if (in_array($extension, $allowedExts)) {
 	}
 
 } else {
-	echo "Sorry Mike. :)";
+	echo "That file is not okay! :(\n";
+	$fileName = urlencode($_FILES["userfile"]["name"]);
+	echo "Upload: " . $fileName . "<br>";
+	echo "Type: " . $_FILES["userfile"]["type"] . "<br>";
+	echo "Size: " . ($_FILES["userfile"]["size"] / 1024) . " kB<br>";
+	echo "Temp file: " . $_FILES["userfile"]["tmp_name"] . "<br>";
 }

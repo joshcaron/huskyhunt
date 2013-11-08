@@ -6,6 +6,12 @@ Google.Maps = {
 
 	geocoder: {},
 
+	openInfoBox: {
+		close: function() {
+			// do nothing
+		}
+	},
+
 	blueMarker: '/assets/img/marker_blue.png',
 	redMarker: '/assets/img/marker_red.png',
 	greenMarker: '/assets/img/marker_green.png',
@@ -26,14 +32,15 @@ Google.Maps = {
 		for (var id in data) {
 			var clue = data[id];
 			if (clue.latlang) {
-				console.log("Already have information.");
-				this.placeMarker(clue.latlang);
+				// console.log("Already have information.");
+				this.placeMarker(clue);
+				this.placeMarkerInfo(clue);
 			} else {
 				var address = clue.address;
 				if (address == '-') {
 					continue;
 				}
-				var geocode = this.geocode(clue, address);		
+				var geocode = this.geocode(clue, address);
 			}
 		}
 	},
@@ -47,6 +54,7 @@ Google.Maps = {
 				var latlang = results[0].geometry.location;
 				clue.latlang = latlang;
 				self.placeMarker(clue);
+				self.placeMarkerInfo(clue);
 			}
 		});
 		
@@ -60,7 +68,26 @@ Google.Maps = {
 			title: clue.description,
 			icon: icon
 		});
-		// console.log(marker);
+		clue.marker = marker;
+	},
+
+	placeMarkerInfo: function(clue) {
+		var contents =
+			"<dl class='info'>"
+			+ "<dt>Clue ID</dt><dd>" + clue.id + "</dd>"
+			+ "<dt>Description</dt><dd>" + clue.description + "</dd>"
+			+ "<dt>Points</dt><dd>" + clue.pointvalue + "</dd>"
+			+ "<dt>Address</dt><dd>" + clue.address + "</dd>"
+			+ "</dl>";
+		var infowindow = new google.maps.InfoWindow({
+			content: contents
+		});
+		var self = this;
+		google.maps.event.addListener(clue.marker, 'click', function() {
+			self.openInfoBox.close();
+			infowindow.open(self.map, clue.marker);
+			self.openInfoBox = infowindow;
+		});
 	},
 
 	determineClueColor: function(clue) {

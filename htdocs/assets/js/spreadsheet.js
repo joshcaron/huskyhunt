@@ -89,7 +89,10 @@ Google.Spreadsheet = {
 
 			entry += "<td>" + value + "</td>";
 		}
-		entry += "<td>" + "<a class='ui red button' href='/location.php?id=" + row.id + "'>Upload</a>";
+		entry += "<td>" + "<a class='ui red button' href='/location.php?id=" + row.id + "'>Info</a>";
+		entry += '<td><form enctype="multipart/form-data" action="/upload.php" method="post">'
+				+ '<div class="upload ui blue button">Upload<input type="file" name="' + row.id + '" accept="image/*" capture="camera"></div>'
+				+ '</form></td>';
 
 		entry += "</tr>";
 		return entry;
